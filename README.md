@@ -1,16 +1,156 @@
-# React + Vite
+# 🎲 Proyecto 17 --- Simulador Interactivo de Procesos Estocásticos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un **simulador educativo** enfocado en visualizar y comprender
+el comportamiento de los procesos estocásticos clásicos:
 
-Currently, two official plugins are available:
+-   **Procesos de Poisson**
+-   **Cadenas de Markov (tiempo discreto)**
+-   **Sistemas de Colas M/M/1**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El objetivo principal es ofrecer una herramienta intuitiva, visual y
+didáctica para estudiantes de Probabilidad, Estadística, Investigación
+Operativa y Ciencia de Datos.
 
-## React Compiler
+------------------------------------------------------------------------
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Características Principales
 
-## Expanding the ESLint configuration
+-   ✅ **Simulación en tiempo real**\
+    Ejecuta procesos estocásticos con parámetros personalizables.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   ✅ **Visualizaciones intuitivas**\
+    Gráficas claras usando React + Chart.js/Plotly para comprensión
+    inmediata.
+
+-   ✅ **Interfaz educativa y amigable**\
+    Pensada para el aprendizaje con ejemplos y parámetros guiados.
+
+-   ✅ **Backend especializado**\
+    Todas las simulaciones están implementadas en Python usando NumPy.
+
+-   ✅ **Modular y extensible**\
+    Estructura lista para añadir nuevos modelos estocásticos.
+
+------------------------------------------------------------------------
+
+## 🛠️ Tecnologías Utilizadas
+
+### 🔙 Backend (Simuladores)
+
+-   **Python**
+-   **Flask** -- API REST
+-   **NumPy** -- generación aleatoria y cálculos estadísticos
+
+### 🔜 Frontend (Interfaz)
+
+-   **React** -- UI modular y moderna
+-   **Tailwind CSS** -- estilos rápidos y responsivos
+-   **Fetch API / Axios** -- consumo de servicios REST
+
+------------------------------------------------------------------------
+
+## ⚙️ Instalación y Configuración
+
+### 1️⃣ Clonar el repositorio
+
+``` bash
+git clone https://github.com/VegaAlex20/estocasticos.git
+cd estocasticos
+```
+
+------------------------------------------------------------------------
+
+### 2️⃣ Configurar el Backend
+
+``` bash
+python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+
+cd backend
+pip install -r requirements.txt
+```
+
+------------------------------------------------------------------------
+
+### 3️⃣ Configurar el Frontend
+
+``` bash
+cd frontend
+npm install
+npm run dev
+```
+
+------------------------------------------------------------------------
+
+## ▶️ 4️⃣ Iniciar el Proyecto
+
+En una terminal (backend):
+
+``` bash
+cd backend
+python app.py
+```
+
+En otra terminal (frontend):
+
+``` bash
+cd frontend
+npm run dev
+```
+
+El backend se ejecutará en `http://localhost:5000`\
+El frontend en `http://localhost:5173`
+
+------------------------------------------------------------------------
+
+## 📁 Estructura del Proyecto
+
+    estocasticos/
+    ├── backend/
+    │   ├── simulations/        # Simulaciones: Poisson, Markov y Colas
+    │   ├── app.py              # API principal con Flask
+    │   └── requirements.txt    # Dependencias del backend
+    │
+    ├── frontend/
+    │   ├── src/                # Componentes, vistas y lógica del simulador
+    │   └── package.json
+    │
+    ├── .env                    # Variables de entorno (opcional)
+    └── README.md               # Documentación del proyecto
+
+------------------------------------------------------------------------
+
+## 📘 Modelos Implementados
+
+### 🔹 **Proceso de Poisson**
+
+-   Generación de tiempos entre llegadas\
+-   Conteos por intervalo\
+-   Comparación entre valores simulados y teóricos
+
+### 🔹 **Cadenas de Markov (discretas)**
+
+-   Evolución del estado a través del tiempo\
+-   Distribuciones de estado empíricas\
+-   Matriz de transición definida por el usuario
+
+### 🔹 **Sistema de Colas M/M/1**
+
+-   Llegadas (λ) y servicio (μ) exponenciales\
+-   Tiempo en cola, tiempo en sistema\
+-   Longitud de la cola en el tiempo\
+-   Estadísticas de espera
+
+------------------------------------------------------------------------
+
+## 📬 Contacto
+
+📧 **Email:** alefrvg@gmail.com\
+🐙 **GitHub:** https://github.com/VegaAlex20
+
+------------------------------------------------------------------------
+
+## 📝 Licencia
+
+Este proyecto está bajo la licencia **MIT**.\
+Hecho con 💻, ☕ y paciencia por **Alex**.
